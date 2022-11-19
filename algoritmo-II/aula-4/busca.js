@@ -4,6 +4,10 @@ function busca(array, de, ate, valorBuscado) {
     const meio = Math.floor((de + ate) / 2)
     const atual = array[meio]
 
+    if (de > ate) {
+      return -1
+    }
+
     if(valorBuscado === atual.preco){
         return meio
     }
@@ -17,4 +21,4 @@ function busca(array, de, ate, valorBuscado) {
     }
 }
 
-console.log(busca(listaLivros, 0, listaLivros.length -1, 60))
+console.log(busca(listaLivros, 0, listaLivros.length - 1, 1));
